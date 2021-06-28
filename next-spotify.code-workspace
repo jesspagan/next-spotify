@@ -1,0 +1,15 @@
+{
+  "folders": [
+    {
+      "path": "../next-spotify"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      ".next": true,
+      ".vercel": true,
+      ".vscode": true,
+      "node_modules": true
+    }
+  }
+}

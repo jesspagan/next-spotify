@@ -1,15 +1,14 @@
 .container {
+  font-family: "Alegreya Sans SC", sans-serif;
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  background-color: rgb(1, 1, 34);
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -18,24 +17,23 @@
 }
 
 .footer {
+  max-width: 1080px;
+  background-color: white;
+  padding-bottom: 18px;
+  font-size: 12px;
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  color: gray;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.title span:first-child {
+  color: yellow;
+  font-size: 64px;
 }
 
 .title a:hover,
@@ -45,77 +43,80 @@
 }
 
 .title {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 60px 0 40px;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
-.title,
-.description {
+.title {
   text-align: center;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.images {
+  max-width: 1080px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: white;
+  padding: 60px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  justify-content: center;
+  column-gap: 40px;
+  row-gap: 60px;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+.image {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.image_container {
+  box-sizing: border-box;
+  width: fit-content;
+  position: relative;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.image_container:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(255, 255, 255, 0.7) 75%,
+    rgba(255, 255, 255, 0.8) 80%,
+    rgba(255, 255, 255, 0.9) 85%,
+    rgba(255, 255, 255, 0.94) 90%,
+    white 100%
+  );
+  z-index: 10;
+  top: 0;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.release {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.release span {
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 12px;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.release_title {
+  font-weight: bold;
+}
+
+.release_type {
+  color: gray;
 }
