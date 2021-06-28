@@ -37,7 +37,11 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
         <div className={styles.images}>
           {releases.map((release) => (
             <div className={styles.release} key={release.id}>
-              <a href={release.external_urls.spotify} target='_blank'>
+              <a
+                href={release.external_urls.spotify}
+                target='_blank'
+                rel='noreferrer'
+              >
                 <div className={styles.image_container}>
                   <Image
                     className={styles.image}
@@ -61,15 +65,19 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
       <footer className={styles.footer}>
         <p>
           Project by{" "}
-          <a href='https://jesspagan.com' target='_blank'>
+          <a href='https://jesspagan.com' target='_blank' rel='noreferrer'>
             Jess Pagan
           </a>{" "}
           using{" "}
-          <a href='https://nextjs.org' target='_blank'>
+          <a href='https://nextjs.org' target='_blank' rel='noreferrer'>
             Next.js
           </a>{" "}
           and{" "}
-          <a href='https://developer.spotify.com/' target='_blank'>
+          <a
+            href='https://developer.spotify.com/'
+            target='_blank'
+            rel='noreferrer'
+          >
             Spotify for Developers
           </a>
         </p>
