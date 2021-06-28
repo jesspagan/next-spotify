@@ -22,7 +22,7 @@ interface ExternalUrl {
 }
 
 interface Artist {
-  external_urls: ExternalUrl[];
+  external_urls: ExternalUrl;
   href: string;
   id: string;
   name: string;
@@ -45,7 +45,7 @@ interface Album {
   album_type: AlbumType;
   artists: Artist[];
   available_markets: string;
-  external_urls: ExternalUrl[];
+  external_urls: ExternalUrl;
   href: string;
   id: string;
   images: Image[];
