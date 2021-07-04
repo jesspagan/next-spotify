@@ -55,19 +55,30 @@
 }
 
 .releases {
+  display: flex;
+  flex-direction: column;
   max-width: 1080px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: white;
-  padding: 40px 0;
   overflow: hidden;
   flex: 1;
+}
+
+.decor {
+  margin-bottom: 36px;
+  margin-top: 12px;
+  height: 6px;
+  width: 30px;
+  border-radius: 24px;
+  background: #ebebeb;
+  align-self: center;
 }
 
 .albums {
   padding-bottom: 24px;
   display: flex;
-  column-gap: 18px;
+  column-gap: 14px;
   overflow-y: auto;
 }
 
@@ -85,7 +96,6 @@
 
 .singles {
   margin-left: 24px;
-  /* margin-top: 24px; */
 }
 
 .singles h2 {

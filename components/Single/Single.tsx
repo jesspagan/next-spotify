@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Album } from "../../pages/api/spotify";
-import { capitalize } from "../../utils/formatters";
+import { capitalize, getYear } from "../../utils/formatters";
 import styles from "./Single.module.css";
 
 export default function Single({ single }: { single: Album }) {
@@ -16,7 +16,7 @@ export default function Single({ single }: { single: Album }) {
       <div className={styles.info}>
         <span className={styles.title}>{single.name}</span>
         <span className={styles.date_type}>
-          {capitalize(single.album_type)}
+          {`${getYear(single.release_date)} • ${capitalize(single.album_type)}`}
         </span>
       </div>
     </div>

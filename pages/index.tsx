@@ -48,6 +48,7 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
           <span>new releases</span>
         </h1>
         <section className={styles.releases}>
+          <div className={styles.decor} />
           <div className={styles.albums}>
             {albums.map((album) => (
               <Album album={album} />

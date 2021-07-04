@@ -12,8 +12,8 @@ export default function Album({ album }: { album: IAlbum }) {
             className={styles.image}
             alt={`${album.name} cover photo`}
             src={album.images[1].url}
-            width={140}
-            height={140}
+            width={136}
+            height={136}
           />
         </div>
       </a>
