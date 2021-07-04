@@ -19,6 +19,7 @@ export default function Single({ single }: { single: Album }) {
           {`${getYear(single.release_date)} • ${capitalize(single.album_type)}`}
         </span>
       </div>
+      <span className={styles.decor}>••</span>
     </div>
   );
 }

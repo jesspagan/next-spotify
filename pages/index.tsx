@@ -42,7 +42,7 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
         />
         <link
           rel='preload'
-          href='/fonts/September.ttf'
+          href='/fonts/Coco-Regular.otf'
           as='font'
           crossOrigin=''
         />

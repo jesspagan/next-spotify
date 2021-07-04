@@ -32,12 +32,6 @@
   color: gray;
 }
 
-.title span:first-child {
-  color: yellow;
-  font-size: 64px;
-  letter-spacing: 12px;
-}
-
 .title a:hover,
 .title a:focus,
 .title a:active {
@@ -45,16 +39,21 @@
 }
 
 .title {
-  font-family: "September", sans-serif;
+  font-family: "Coco", sans-serif;
   display: flex;
   flex-direction: column;
   color: white;
-  margin: 100px 0 40px;
+  margin: 80px 52px 30px;
   line-height: 1.15;
-  font-size: 24px;
-  text-align: center;
-  letter-spacing: 8px;
   font-weight: 100;
+  font-size: 64px;
+  letter-spacing: 12px;
+}
+
+.title span:first-child {
+  color: yellow;
+  font-size: 24px;
+  letter-spacing: 8px;
 }
 
 .releases {
@@ -115,6 +114,7 @@
 }
 
 .singles_list {
+  width: 340px;
   display: flex;
   flex-direction: column;
   row-gap: 14px;
