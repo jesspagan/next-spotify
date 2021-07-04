@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;
   color: white;
-  margin: 60px 0 40px;
+  margin: 128px 0 40px;
   line-height: 1.15;
   font-size: 3rem;
   text-align: center;
@@ -64,23 +64,40 @@
   flex: 1;
 }
 
-.images {
+.albums {
   padding-bottom: 24px;
   display: flex;
   column-gap: 18px;
   overflow-y: auto;
 }
 
-.images > :first-child {
+.albums > :first-child {
   margin-left: 24px;
 }
 
-.images > :last-child {
+.albums > :last-child {
   margin-right: 24px;
 }
 
-.images > div {
+.albums > div {
   flex-shrink: 0;
+}
+
+.singles {
+  margin-left: 24px;
+  /* margin-top: 24px; */
+}
+
+.singles h2 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.singles_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
 }
 
 @media only screen and (max-width: 1080px) {

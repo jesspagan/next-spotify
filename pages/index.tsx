@@ -2,6 +2,7 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import React from "react";
 import Album from "../components/Album/Album";
+import Single from "../components/Single/Single";
 import styles from "../styles/Home.module.css";
 import { Album as IAlbum, getNewReleases, NewReleases } from "./api/spotify";
 
@@ -47,10 +48,18 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
           <span>new releases</span>
         </h1>
         <section className={styles.releases}>
-          <div className={styles.images}>
+          <div className={styles.albums}>
             {albums.map((album) => (
               <Album album={album} />
             ))}
+          </div>
+          <div className={styles.singles}>
+            <h2>Tracks</h2>
+            <div className={styles.singles_list}>
+              {singles.map((single) => (
+                <Single single={single} />
+              ))}
+            </div>
           </div>
         </section>
       </main>

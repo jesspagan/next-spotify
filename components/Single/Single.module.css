@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+}
+
+.image {
+  border-radius: 25px;
+}
+
+.info {
+  margin-left: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  max-width: 230px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date_type {
+  color: lightgray;
+}
