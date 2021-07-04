@@ -1,8 +1,9 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import React from "react";
+import Album from "../components/Album/Album";
 import styles from "../styles/Home.module.css";
-import { getNewReleases, NewReleases } from "./api/spotify";
+import { Album as IAlbum, getNewReleases, NewReleases } from "./api/spotify";
 
 export const getStaticProps: GetStaticProps = async () => {
   const newReleases = await getNewReleases();
@@ -12,7 +13,18 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function Home({ newReleases }: { newReleases: NewReleases }) {
-  const releases = newReleases.albums.items;
+  const albums: IAlbum[] = [];
+  const singles: IAlbum[] = [];
+
+  newReleases.albums.items.forEach((item) => {
+    switch (item.album_type) {
+      case "album":
+        albums.push(item);
+        break;
+      case "single":
+        singles.push(item);
+    }
+  });
 
   return (
     <div className={styles.container}>
@@ -24,7 +36,7 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
         />
         <link rel='icon' href='/favicon.ico' />
         <link
-          href='https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC'
+          href='https://fonts.googleapis.com/css2?family=Poppins'
           rel='stylesheet'
         />
       </Head>
@@ -34,39 +46,19 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
           <span>spotify</span>
           <span>new releases</span>
         </h1>
-        <div className={styles.images}>
-          {releases.map((release) => (
-            <div className={styles.release} key={release.id}>
-              <a
-                href={release.external_urls.spotify}
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className={styles.image_container}>
-                  <Image
-                    className={styles.image}
-                    alt={`${release.name} cover photo`}
-                    src={release.images[1].url}
-                    width={160}
-                    height={160}
-                  />
-                </div>
-              </a>
-              <span className={styles.release_title}>
-                {release.name.toLowerCase()}
-              </span>
-              <span className={styles.release_type}>
-                {release.album_type.toLowerCase()}
-              </span>
-            </div>
-          ))}
-        </div>
+        <section className={styles.releases}>
+          <div className={styles.images}>
+            {albums.map((album) => (
+              <Album album={album} />
+            ))}
+          </div>
+        </section>
       </main>
       <footer className={styles.footer}>
         <p>
           Project by{" "}
           <a href='https://jesspagan.com' target='_blank' rel='noreferrer'>
-            Jess Pagan
+            Jessica Pagan
           </a>{" "}
           using{" "}
           <a href='https://nextjs.org' target='_blank' rel='noreferrer'>

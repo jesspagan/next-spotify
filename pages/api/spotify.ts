@@ -40,7 +40,7 @@ interface AlbumRestriction {
   reason: string;
 }
 
-interface Album {
+export interface Album {
   album_group: AlbumGroup;
   album_type: AlbumType;
   artists: Artist[];
