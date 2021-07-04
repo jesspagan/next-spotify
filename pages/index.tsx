@@ -40,6 +40,12 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
           href='https://fonts.googleapis.com/css2?family=Poppins'
           rel='stylesheet'
         />
+        <link
+          rel='preload'
+          href='/fonts/Monastic.ttf'
+          as='font'
+          crossOrigin=''
+        />
       </Head>
 
       <main className={styles.main}>

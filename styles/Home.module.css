@@ -35,6 +35,7 @@
 .title span:first-child {
   color: yellow;
   font-size: 64px;
+  letter-spacing: 12px;
 }
 
 .title a:hover,
@@ -44,13 +45,15 @@
 }
 
 .title {
+  font-family: "Monastic", sans-serif;
   display: flex;
   flex-direction: column;
   color: white;
-  margin: 114px 0 40px;
+  margin: 100px 0 40px;
   line-height: 1.15;
-  font-size: 3rem;
+  font-size: 24px;
   text-align: center;
+  letter-spacing: 8px;
 }
 
 .releases {
