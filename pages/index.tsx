@@ -51,7 +51,7 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
       <main className={styles.main}>
         <h1 className={styles.title}>
           <span>SPOTIFY</span>
-          <span>new releases</span>
+          <span>NEW RELEASES</span>
         </h1>
         <section className={styles.releases}>
           <div className={styles.decor} />
