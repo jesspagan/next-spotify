@@ -52,7 +52,7 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
           <div className={styles.albums_container}>
             <div className={styles.albums}>
               {albums.map((album) => (
-                <Album album={album} />
+                <Album album={album} key={album.id} />
               ))}
             </div>
           </div>
@@ -60,7 +60,7 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
             <h2>Tracks</h2>
             <div className={styles.singles_list}>
               {singles.map((single) => (
-                <Single single={single} />
+                <Single single={single} key={single.id} />
               ))}
             </div>
           </div>
