@@ -49,10 +49,12 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
         </h1>
         <section className={styles.releases}>
           <div className={styles.decor} />
-          <div className={styles.albums}>
-            {albums.map((album) => (
-              <Album album={album} />
-            ))}
+          <div className={styles.albums_container}>
+            <div className={styles.albums}>
+              {albums.map((album) => (
+                <Album album={album} />
+              ))}
+            </div>
           </div>
           <div className={styles.singles}>
             <h2>Tracks</h2>
