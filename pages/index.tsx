@@ -90,6 +90,15 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
           >
             Spotify for Developers
           </a>
+          . Design from{" "}
+          <a
+            href='https://dribbble.com/shots/15474486-Player-App-Design'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Dribbble
+          </a>
+          .
         </p>
       </footer>
     </div>
