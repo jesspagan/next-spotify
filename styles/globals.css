@@ -22,3 +22,24 @@ a {
   font-weight: 400;
   font-display: swap;
 }
+@font-face {
+  font-family: "ONEDAY";
+  src: url("/fonts/ONEDAY.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ginebra";
+  src: url("/fonts/Ginebra.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "September";
+  src: url("/fonts/September.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

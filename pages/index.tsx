@@ -42,7 +42,7 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
         />
         <link
           rel='preload'
-          href='/fonts/Monastic.ttf'
+          href='/fonts/September.ttf'
           as='font'
           crossOrigin=''
         />
@@ -50,7 +50,7 @@ export default function Home({ newReleases }: { newReleases: NewReleases }) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <span>spotify</span>
+          <span>SPOTIFY</span>
           <span>new releases</span>
         </h1>
         <section className={styles.releases}>
