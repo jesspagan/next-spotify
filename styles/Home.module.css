@@ -87,11 +87,11 @@
 }
 
 .albums > :first-child {
-  margin-left: 24px;
+  padding-left: 24px;
 }
 
 .albums > :last-child {
-  margin-right: 24px;
+  padding-right: 24px;
 }
 
 .albums > div {
